@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SilvIA</title>
+    <link rel="shortcut icon" type="image/svg" href="assets/img/imgTitle.svg"/>
+
+    <!--link google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!--link css-->
+    <link rel="stylesheet" href="assets/CSS/style.css">
+
+    <!--link Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- link htmx -->
+    <script src="https://unpkg.com/htmx.org@2.0.1" integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.1/dist/htmx.js" integrity="sha384-gpIh5aLQ0qmX8kZdyhsd6jA24uKLkqIr1WAGtantR4KsS97l/NRBvh8/8OYGThAf" crossorigin="anonymous"></script>
+
+    <!-- link aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	
+	<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault(); // Evita o envio padrão do formulário
+
+                const formData = new FormData(form);
+                const data = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    message: formData.get('message')
+                };
+
+                try {
+                    const response = await fetch('https://crab.codes/api/send-email', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    });
+
+                    if (response.ok) {
+                        // Handle success (e.g., show a success message)
+                        alert('Formulário enviado com sucesso!');
+                    } else {
+                        // Handle error
+                        alert('Erro ao enviar o formulário.');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Erro ao enviar o formulário.');
+                }
+            });
+        });
+    </script>
+
+    <!-- Development version -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Production version -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="header__principal">
+            <img class="img__1" src="assets/img/Group 7.svg" alt="Logo SilvIA" />
+        </div>
+    </header>
+    <main>
+        <section class="topo-do-site" id="secao1">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>SilvIA -  Sistema Integrado para a Longevidade e Vida Plena baseado em IA<span>.</span></h1>
+                        <p></p>
+
+                        <div class="btn-contato">
+                            <a href="" target="_blank">
+                                <button>Começar agora</button>
+                            </a>
+                        </div>
+                    </div><!-- txt-topo-site -->
+                    <div class="img-topo-site">
+                        <img src="assets/img/Group 8.svg" alt="devices">
+                    </div><!-- img-topo-site -->
+                </div><!-- flex -->
+            </div><!-- interface -->
+        </section><!-- topo-do-site -->
+
+        <!-- Seção com cards -->
+        <section class="secao4" id="sobre">
+            <h2 class="titulo__secao4">PRINCIPAIS FUNCIONALIDADES</h2>
+            <div class="secao4-div">
+                <!-- Card 1 -->
+                <div class="secao4-div-card">
+                    <i class="bi bi-telephone"></i>
+                    <h3>Ligação por audio e video-chamada</h3>
+                    <p class="paragrafo__card">Voce vai poder fazer ligação por voz ou por video-chamada a qualquer momento.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="secao4-div-card">
+                    <i class="bi bi-headset"></i>
+                    <h3>Suporte 24hrs</h3>
+                    <p class="paragrafo__card">Cuidamos da presença online da sua marca, engajando seu público e aumentando a visibilidade.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="secao4-div-card">
+                    <i class="bi bi-alarm"></i>
+                    <h3>Alarme programado</h3>
+                    <p class="paragrafo__card">Alcance mais pessoas através dos anúncios pagos, chega de queimar dinheiro com o botão promover.</p>
+                </div>
+            </div>
+        </section>
+        <section class="secao4" id="sobre">
+            <div class="secao4-div">
+                <!-- Card 4 -->
+                <div class="secao4-div-card">
+                    <i class="bi bi-calendar-week"></i>
+                    <h3>Configuarar data</h3>
+                    <p class="paragrafo__card">Desenvolvemos e-commerce completos e eficientes para ampliar suas vendas online.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="secao4-div-card">
+                    <i class="bi bi-prescription2"></i>
+                    <h3>Gerenciamento de medicações</h3>
+                    <p class="paragrafo__card">Projetamos e desenvolvemos sites modernos e funcionais, além de landing pages que convertem.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="topo-do-site" id="secao1">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site1">
+                        <h1>Tempo Médio de Uso do Smartphone<span>.</span></h1>
+                        <p>Atualmente, as pessoas passam em média 4 a 7 horas por dia no smartphone. No Brasil, esse número varia entre 5 e 6 horas diárias, um dos mais altos do mundo. Jovens de 18 a 24 anos tendem a ultrapassar 7 horas, enquanto adultos ficam entre 4 e 6 horas e idosos abaixo de 3 horas. Só em redes sociais, a média global é de 2h30 a 3h por dia, com destaque para o TikTok, onde usuários gastam cerca de 1h30 diária.</p>
+
+                    </div><!-- txt-topo-site -->
+                    <div class="img-topo-site">
+                        <img src="assets/img/Mobile-amico.svg" alt="devices">
+                    </div><!-- img-topo-site -->
+                </div><!-- flex -->
+            </div><!-- interface -->
+        </section><!-- topo-do-site -->
+
+        <section class="topo-do-site" id="secao1">
+            <div class="interface">
+                <div class="flex">
+
+                    <div class="img-topo-site">
+                        <img src="assets/img/Group 8.svg" alt="devices">
+                    </div><!-- img-topo-site -->
+                    <div class="txt-topo-site1">
+                        <h1>SilvIA -  Sistema Integrado para a Longevidade e Vida Plena baseado em IA<span>.</span></h1>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                    </div><!-- txt-topo-site -->
+                    
+                </div><!-- flex -->
+            </div><!-- interface -->
+        </section><!-- topo-do-site -->
+
+        <section class="topo-do-site" id="secao1">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site1">
+                        <h1>SilvIA -  Sistema Integrado para a Longevidade e Vida Plena baseado em IA<span>.</span></h1>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                    </div><!-- txt-topo-site -->
+                    <div class="img-topo-site">
+                        <img src="assets/img/Group 8.svg" alt="devices">
+                    </div><!-- img-topo-site -->
+                </div><!-- flex -->
+            </div><!-- interface -->
+        </section><!-- topo-do-site -->
+
+        <section class="topo-do-site" id="secao1">
+            <div class="interface">
+                <div class="flex">
+
+                    <div class="img-topo-site">
+                        <img src="assets/img/Group 8.svg" alt="devices">
+                    </div><!-- img-topo-site -->
+                    <div class="txt-topo-site1">
+                        <h1>SilvIA -  Sistema Integrado para a Longevidade e Vida Plena baseado em IA<span>.</span></h1>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                    </div><!-- txt-topo-site -->
+                    
+                </div><!-- flex -->
+            </div><!-- interface -->
+        </section><!-- topo-do-site -->
+
+        <section class="formulario" id="secao5">
+            <div class="interface">
+                    <h2 class="titulo__form">FALE AGORA COM A <span>GENTE!</span></h2>
+                <div class="flex">    
+                    <img class="img__form" src="assets/img/imgform.svg" alt="Foto telefone"/>
+                    <form action="">
+                        <input type="text" name="name" id="name" placeholder="Seu nome" required>
+                        <input type="text" name="email" id="email" placeholder="Seu email" required>
+                        <input type="text" name="phone" id="phone" placeholder="Seu celular">
+                        <textarea name="message" id="message" placeholder="Sua mensagem" required ></textarea>
+                        <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+                    </form>
+                </div> <!-- flex -->   
+            </div><!-- interface -->
+        </section><!-- formulario -->
+    </main>
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img class="logo__footer" src="assets/img/Group 7.svg" alt="Logo footer">
+                    </div><!-- logo-footer -->
+                    <div class="btn-social">
+                        <a href="https://www.instagram.com/crabcodes" target="_blank"><button><i class="bi bi-instagram" id="redes"></i></button></a>
+                        <a href="https://wa.me/558197090571" target="_blank"><button><i class="bi bi-whatsapp" id="redes"></i></button></a>
+                        <a href="https://www.linkedin.com/in/crab-codes-98b669320/" target="_blank"><button><i class="bi bi-linkedin" id="redes"></i></button></a>
+                    </div><!-- btn-social -->
+                </div>
+            </div><!-- line-footer -->   
+            
+        </div><!-- interface -->
+    </footer>
+</body>
+</html>
