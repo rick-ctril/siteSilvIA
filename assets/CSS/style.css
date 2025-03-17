@@ -32,6 +32,9 @@ h2.titulo{
     font-size: 38px;
     text-align: center;
 }
+span{
+    color: #145A7B;
+}
 h2.titulo span{
     color: #758BFD;
 }
@@ -70,7 +73,7 @@ section.topo-do-site .flex{
     color: #393939;
     font-size: 35px;
     line-height: 40px;
-    font-weight: 600;
+    font-weight: 700;
 
 }
 .topo-do-site .txt-topo-site h1 span {
@@ -107,6 +110,8 @@ i{
     margin: 10px;
     margin-bottom: 10px;
     color: #393939;
+    font-size: 35px;
+    margin-top: 100px;
 }
 .secao4 {
     margin: 0;
@@ -298,12 +303,46 @@ footer .flex{
 
 
 /* SECTION DEPOIS DOS CARDS */
+.topo-do-site {
+    margin-top: 5px;
 
+}
 .txt-topo-site1 h1{
-    text-align: center;
+    text-align: left;
+    margin-left: 70px;
+    margin-bottom: 25px;
+    margin-right: 70px;
 }
 .txt-topo-site1 p{
+    text-align: left;
+    color: #656565;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.txt-topo-site2 h1{
+    text-align: center;
+    margin-left: 70px;
+    margin-bottom: 25px;
+    margin-right: 70px;
+}
+.txt-topo-site2 p{
     text-align: center;
     color: #656565;
-    margin: 40px 0px;
+    margin-left: 70px;
+    margin-bottom: 25px;
+    margin-right: 70px;
+}
+.img-topo-site2 img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    width: 25rem;
+    margin-left: 85px;
+}
+
+.img-topo-site3 img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    width: 25rem;
+    margin-right: 85px;
 }
