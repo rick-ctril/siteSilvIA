@@ -47,7 +47,7 @@ button:hover, form .btn-enviar input:hover{
 /* header */
 header{
     height: 852px;
-    background-image: url("../img/Bg Principal.svg");
+    background-image:  url("../img/Bg_Principal.svg");
 }
 .header__principal{
     display: flex;
@@ -197,7 +197,7 @@ form{
     margin-top: 40px;
 }
 form input, form textarea {
-    border: 2px #FF7C39;
+    border: 5px #145A7B solid;
     width: 100%;
     background-color: #ebe7e7f3;
     border: 0;
