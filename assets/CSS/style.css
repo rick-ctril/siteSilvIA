@@ -55,7 +55,7 @@ header{
     height: 600px;
 }
 .img__1{
-       width: 25%; 
+       width: 28%; 
 }
 
  /* ESTILO DO TOPO DO SITE */
@@ -262,7 +262,7 @@ form .btn-enviar input{
 footer{
     padding: 40px 4%;
     height: 270px;
-    background-image: url("../img/Bg Footer.svg");
+    background-image: url("../img/Bg_Footer.svg");
 }
 
 footer .flex{
