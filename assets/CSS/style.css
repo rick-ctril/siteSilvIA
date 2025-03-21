@@ -336,13 +336,13 @@ footer .flex{
 .img-topo-site2 img{
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
-    width: 25rem;
+    width: 20rem;
     margin-left: 85px;
 }
 
 .img-topo-site3 img{
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
-    width: 25rem;
+    width: 20rem;
     margin-right: 85px;
 }
