@@ -20,12 +20,15 @@ body{
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    background-color: #758BFD;
+    background-color: #229BD3;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
     transition: .2s;
     color: #ffffff;
+}
+strong{
+    color: #229BD3;
 }
 h2.titulo{
     color: #000;
@@ -33,7 +36,7 @@ h2.titulo{
     text-align: center;
 }
 span{
-    color: #145A7B;
+    color: #229BD3;
 }
 h2.titulo span{
     color: #758BFD;
@@ -74,10 +77,9 @@ section.topo-do-site .flex{
     font-size: 35px;
     line-height: 40px;
     font-weight: 700;
-
 }
 .topo-do-site .txt-topo-site h1 span {
-    color: #145A7B;
+    color: #229BD3;
 }
 .topo-do-site .txt-topo-site p {
     color: #656565;
@@ -86,7 +88,7 @@ section.topo-do-site .flex{
 .topo-do-site .img-topo-site img{
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
-    width: 25rem;
+    width: 30rem;
 }
 
 @keyframes flutuar {
@@ -102,7 +104,7 @@ section.topo-do-site .flex{
 
 i{
     font-size: 70px;
-    color: #145A7B;
+    color: #229BD3;
 }
 
 .titulo__secao4{
@@ -197,7 +199,7 @@ form{
     margin-top: 40px;
 }
 form input, form textarea {
-    border: 5px #145A7B solid;
+    border: 5px #229BD3 solid;
     width: 100%;
     background-color: #ebe7e7f3;
     border: 0;
@@ -217,7 +219,7 @@ form .btn-enviar{
 }
 form .btn-enviar input{
     width: 100px;
-    background-color: #758BFD;
+    background-color: #229BD3;
     color: #ffffff;
     font-weight: 600;
     cursor: pointer;
@@ -226,7 +228,7 @@ form .btn-enviar input{
 .img__form{
     height: 550px;
     margin-left: 100px;
-    width: 20rem;
+    width: 25rem;
 }
 
 /* RESPONSIVIDADE */
@@ -286,7 +288,7 @@ footer .flex{
 }
 .logo__footer{
     margin-top: 125px;
-    height: 50px;
+    height: 60px;
 }
 
 /* RESPONSIVIDADE */
@@ -343,6 +345,6 @@ footer .flex{
 .img-topo-site3 img{
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
-    width: 20rem;
+    width: 30rem;
     margin-right: 85px;
 }
