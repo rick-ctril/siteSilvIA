@@ -1,11 +1,11 @@
 /* ESTILO GERAL */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-body{
+body {
     background-color: #FFFFFF;
     height: 100vh;
 }
@@ -16,7 +16,7 @@ body{
 .flex {
     display: flex;
 }
-.btn-contato button{
+.btn-contato button {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
@@ -27,47 +27,47 @@ body{
     transition: .2s;
     color: #ffffff;
 }
-strong{
+strong {
     color: #229BD3;
 }
-h2.titulo{
+h2.titulo {
     color: #000;
     font-size: 38px;
     text-align: center;
 }
-span{
+span {
     color: #229BD3;
 }
-h2.titulo span{
+h2.titulo span {
     color: #758BFD;
 }
-button:hover, form .btn-enviar input:hover{
+button:hover, form .btn-enviar input:hover {
     box-shadow: 0px 0px 8px #17678C;
     transform: scale(1.05);
     color: #ffffff;
 }
 
 /* header */
-header{
+header {
     height: 852px;
-    background-image:  url("../img/Bg_Principal.svg");
+    background-image: url("../img/Bg_Principal.svg");
 }
-.header__principal{
+.header__principal {
     display: flex;
     justify-content: center;
     height: 600px;
 }
-.img__1{
-       width: 28%; 
+.img__1 {
+    width: 28%; 
 }
 
- /* ESTILO DO TOPO DO SITE */
-section.topo-do-site{
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site {
     margin-top: 15px;
     padding: 40px 4%;
     animation: translateY 0.8s infinite alternate;
 }
-section.topo-do-site .flex{
+section.topo-do-site .flex {
     align-items: center;
     justify-content: center;
     gap: 90px;
@@ -85,29 +85,28 @@ section.topo-do-site .flex{
     color: #656565;
     margin: 40px 0px;
 }
-.topo-do-site .img-topo-site img{
+.img-topo-site img {
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
     width: 30rem;
 }
 
 @keyframes flutuar {
-    0%{
+    0% {
         top: 0;
     }
-    100%{
+    100% {
         top: 30px;
     }
 }
 
 /* Estilos comuns para os cards */
-
-i{
+i {
     font-size: 70px;
     color: #229BD3;
 }
 
-.titulo__secao4{
+.titulo__secao4 {
     text-align: center;
     margin: 10px;
     margin-bottom: 10px;
@@ -117,7 +116,6 @@ i{
 }
 .secao4 {
     margin: 0;
-    
 }
 
 .secao4-div {
@@ -141,11 +139,11 @@ i{
     transition: all 0.5s ease;
 }
 
-h3{
+h3 {
     color: #393939;
 }
 
-.paragrafo__card{
+.paragrafo__card {
     color: #656565;
 }
 
@@ -168,28 +166,86 @@ h3{
     .secao4-div-card {
         width: 100%;
     }
+    
+    .img__form {
+        height: auto; /* Ajusta a altura para se adaptar melhor */
+        margin-left: 0; /* Remove a margem esquerda */
+        width: 30rem; /* Ajusta a largura para 100% */
+    }
+    
+    .titulo__form {
+        font-size: 16px; /* Ajusta o tamanho da fonte */
+    }
+    
+    section.formulario {
+        font-size: 16px; /* Ajusta o tamanho da fonte */
+    }
+    
+    form input, form textarea {
+        font-size: 16px; /* Ajusta o tamanho da fonte dos inputs */
+    }
+    
+    form .btn-enviar input {
+        width: 100%; /* Ajusta o botão para ocupar 100% da largura */
+    }
+}
+
+/* Responsividade para telas com largura máxima de 1020px */
+@media screen and (max-width: 1020px) {
+    /* CLASSES GERAIS */
+    .flex {
+        flex-direction: column-reverse;
+    }
+
+    .img__1 {
+        width: 200px;
+    }
+    /* TOPO DO SITE */
+    section.topo-do-site .flex {
+        gap: 40px;
+    }
+    section.topo-do-site {
+        padding: 20px 8%;
+    }
+    .topo-do-site h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .topo-do-site p {
+        text-align: center;
+    }
+    .btn-contato {
+        display: none;
+    }
+    /* footer */
+    footer .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+    footer .line-footer {
+        text-align: center;
+    }
 }
 
 /* ESTILO DO FORMULÁRIO DE CONTATOS */
-.flex{
+.flex {
     align-items: center;
     justify-content: center;
     gap: 0,8px;
 }
-.titulo__form{
+.titulo__form {
     text-align: center;
     margin-top: 65px;
     font-size: 10;
     line-height: 40px;
     color: #393939;
 }
-section.formulario{
+section.formulario {
     color: #393939;
     font-size: 10;
     line-height: 40px;
-    
 }
-form{
+form {
     max-width: 500px;
     margin: 0 auto;
     display: flex;
@@ -209,15 +265,15 @@ form input, form textarea {
     color: #000000;
     font-size: 18px;
 }
-form textarea{
+form textarea {
     resize: none;
     max-height: 400px;
 }
-form .btn-enviar{
+form .btn-enviar {
     margin-top: 20px;
     text-align: center;
 }
-form .btn-enviar input{
+form .btn-enviar input {
     width: 100px;
     background-color: #229BD3;
     color: #ffffff;
@@ -225,52 +281,23 @@ form .btn-enviar input{
     cursor: pointer;
     transition: .2s;
 }
-.img__form{
+.img__form {
     height: 550px;
     margin-left: 100px;
     width: 25rem;
 }
 
-/* RESPONSIVIDADE */
-@media screen and (max-width: 1020px){
-    /* CLASSES GERAIS */
-    .flex{
-        flex-direction: column-reverse;
-    }
-
-    .img__1{
-        width: 200px;
-    }
-    /* TOPO DO SITE */
-    section.topo-do-site .flex{
-        gap: 40px;
-    }
-    section.topo-do-site{
-        padding: 20px 8%;
-    }
-    .topo-do-site h1{
-        font-size: 30px;
-        text-align: center;
-    }
-    .topo-do-site p {
-        text-align: center;
-    }
-    .btn-contato {
-        display: none;
-    }
-}
-
 /* footer */
-footer{
+footer {
     padding: 40px 4%;
     height: 270px;
     background-image: url("../img/Bg_Footer.svg");
 }
 
-footer .flex{
+footer .flex {
     justify-content: space-between;
 }
-.btn-social button{
+.btn-social button {
     margin: 7em auto 1em;
     width: 50px;
     height: 50px;
@@ -282,69 +309,11 @@ footer .flex{
     
     transition: .2s;
 }
-#redes{
+#redes {
     font-size: 20px;
     color: #145A7B;
 }
-.logo__footer{
+.logo__footer {
     margin-top: 125px;
     height: 60px;
-}
-
-/* RESPONSIVIDADE */
-@media screen and (max-width: 1020px){
-    /* RODAPÉ */
-    footer .flex{
-        flex-direction: column;
-        gap: 30px;
-    }
-    footer .line-footer {
-        text-align: center;
-    }
-}
-
-
-/* SECTION DEPOIS DOS CARDS */
-.topo-do-site {
-    margin-top: 5px;
-
-}
-.txt-topo-site1 h1{
-    text-align: left;
-    margin-left: 70px;
-    margin-bottom: 25px;
-    margin-right: 70px;
-}
-.txt-topo-site1 p{
-    text-align: left;
-    color: #656565;
-    margin-left: 70px;
-    margin-right: 70px;
-}
-
-.txt-topo-site2 h1{
-    text-align: center;
-    margin-left: 70px;
-    margin-bottom: 25px;
-    margin-right: 70px;
-}
-.txt-topo-site2 p{
-    text-align: center;
-    color: #656565;
-    margin-left: 70px;
-    margin-bottom: 25px;
-    margin-right: 70px;
-}
-.img-topo-site2 img{
-    position: relative;
-    animation: flutuar 2s ease-in-out infinite alternate;
-    width: 20rem;
-    margin-left: 85px;
-}
-
-.img-topo-site3 img{
-    position: relative;
-    animation: flutuar 2s ease-in-out infinite alternate;
-    width: 30rem;
-    margin-right: 85px;
 }
